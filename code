@@ -1,0 +1,30 @@
+walk.stop();
+
+stage.addEventListener(KeyboardEvent.KEY_DOWN, kDownHandler)
+
+stage.addEventListener(KeyboardEvent.KEY_UP, kUpHandler)
+
+function kDownHandler (event:KeyboardEvent):void
+{
+	
+	walk.play();
+	if(event.keyCode==39)
+	{
+		walk.x+=10;
+		walk.scaleX=1;
+		
+	}
+
+	if(event.keyCode==37)
+	{
+		walk.x-=10;
+		walk.scaleX=-1;
+		
+	}
+
+}
+
+	function kUpHandler (event:KeyboardEvent):void
+	{
+		walk.stop();
+	}
